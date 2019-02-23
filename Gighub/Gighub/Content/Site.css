@@ -75,6 +75,16 @@ body {
 
 }
 
+#followBtn {
+    padding: 9px;
+    font-size: 10px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    left: 15px;
+    margin: 5px;
+}
+
 .dropdown-menu {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -94,7 +104,7 @@ body {
 
 .gigs > li {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .gigs > li .details {
@@ -134,6 +144,7 @@ body {
         font-size: 20px;
         padding: 6px 12px;
     }
+
 
 
 

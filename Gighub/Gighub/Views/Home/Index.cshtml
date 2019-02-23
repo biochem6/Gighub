@@ -24,6 +24,7 @@
                     @gig.Genre.Name
                 </span>
                 <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
+                <button data-artist-id="@gig.Artist.Id" class="btn btn-default js-toggle-follow" id="followBtn">Follow <br/> Artist</button>
             </div>
 
         </li>
@@ -40,7 +41,21 @@
                         button
                             .removeClass("btn-default")
                             .addClass("btn-info")
-                            .text("Going");
+                            .text("Going!");
+                    })
+                    .fail(function() {
+                        alert("Something Failed!");
+                    });
+            });
+
+            $(".js-toggle-follow").click(function(e) {
+                var button = $(e.target);
+                $.post("/api/follows", { artistId: button.attr("data-artist-id") })
+                    .done(function() {
+                        button
+                            .removeClass("btn-default")
+                            .addClass("btn-success")
+                            .text("Following!");
                     })
                     .fail(function() {
                         alert("Something Failed!");
