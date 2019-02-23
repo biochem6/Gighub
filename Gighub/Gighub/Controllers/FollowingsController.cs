@@ -6,26 +6,28 @@ using System.Web.Http;
 namespace Gighub.Controllers
 {
     [Authorize]
-    public class FollowsController : ApiController
+    public class FollowingsController : ApiController
     {
         private readonly ApplicationDbContext _context;
 
-        public FollowsController()
+        public FollowingsController()
         {
             _context = new ApplicationDbContext();
         }
 
         [HttpPost]
-        public IHttpActionResult Follow(FollowDto dto)
+        public IHttpActionResult Follow(FollowingDto dto)
         {
             var userId = User.Identity.GetUserId();
 
-            var follow = new Follow
+
+            var following = new Following
             {
-                ArtistId = dto.ArtistId,
-                FollowerId = userId
+                FollowerId = userId,
+                FolloweeId = dto.FolloweeId
             };
-            _context.Follows.Add(follow);
+
+            _context.Followings.Add(following);
             _context.SaveChanges();
 
             return Ok();
