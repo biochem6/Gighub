@@ -69,8 +69,8 @@ body {
 }
 
 .btn {
-    font-size: 17px;
-    padding: 7px 20px;
+    /*font-size: 17px;
+    padding: 7px 20px;*/
     border-radius: 9px;
 
 }
@@ -101,6 +101,8 @@ body {
     position: absolute;
     top: 0;
     left: 70px;
+    width: 125px;
+  
 }
     .gigs > li .details .artist {
         font-weight: bold;
