@@ -1,5 +1,6 @@
 ﻿using Gighub.Models;
 using Gighub.ViewModels;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Data.Entity;
 using System.Linq;
@@ -32,7 +33,6 @@ namespace Gighub.Controllers
 
             return View("Gigs", viewModel);
         }
-
 
         public ActionResult About()
         {
