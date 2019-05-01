@@ -1,0 +1,264 @@
+﻿@color_1: white;
+@color_2: #fff;
+@color_3: blue;
+@color_4: red;
+@color_5: #333;
+@font_family_1: Lato, "Helveitca Neue", Helvetica, Arial, sans-serif;
+@background_color_1: #ff4332;
+@background_color_2: #cd2827;
+@background_color_3: rgba(205, 40, 39, 0.55);
+@border_color_1: #ff4332;
+@border_color_2: #2166f3;
+
+
+
+
+
+
+body {
+    padding-top: 90px;
+    padding-bottom: 20px;
+    font-family: @font_family_1;
+    font-size: 17px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal {
+    dt {
+        white-space: normal;
+    }
+}
+
+input {
+    max-width: 280px;
+}
+
+select {
+    max-width: 280px;
+}
+
+textarea {
+    max-width: 280px;
+}
+
+.voffset {
+    margin-top: 2px;
+}
+
+.voffset1 {
+    margin-top: 5px;
+}
+
+.voffset2 {
+    margin-top: 10px;
+}
+
+.voffset3 {
+    margin-top: 20px;
+}
+
+.voffset4 {
+    margin-top: 40px;
+}
+
+.voffset5 {
+    margin-top: 80px;
+}
+
+.popover {
+    box-shadow: none;
+}
+
+.navbar-inverse {
+    background-color: @background_color_1;
+    border-color: @border_color_1;
+    max-height: 40px;
+
+    .navbar-nav {
+        > li {
+            > a {
+                color: @color_1;
+            }
+        }
+
+        > .open {
+            > a {
+                color: @color_2;
+                background-color: @background_color_2;
+                background-color: @background_color_3;
+
+                &:hover {
+                    color: @color_2;
+                    background-color: @background_color_2;
+                    background-color: @background_color_3;
+                }
+
+                &:focus {
+                    color: @color_2;
+                    background-color: @background_color_2;
+                    background-color: @background_color_3;
+                }
+            }
+        }
+    }
+
+    .navbar-brand {
+        color: @color_1;
+    }
+
+    .notifications {
+        position: relative;
+
+        .badge {
+            position: absolute;
+            top: 8px;
+            right: -1px;
+            background: #a80a0a;
+        }
+    }
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    font-size: 17px;
+    height: 44px;
+    border-radius: 9px;
+
+    &:focus {
+        border-color: @border_color_2;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.btn {
+    border-radius: 9px;
+}
+
+#followBtn {
+    border: none;
+    font-size: 12px;
+    color: @color_3;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.dropdown-menu {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.field-validation-error {
+    color: @color_4;
+    font-weight: bold;
+}
+
+.gigs {
+    list-style: none;
+
+    > li {
+        position: relative;
+        margin-bottom: 50px;
+
+        .details {
+            position: absolute;
+            top: 0;
+            left: 70px;
+
+            .artist {
+                font-weight: bold;
+                display: block;
+            }
+
+            .genre {
+                font-size: 15px;
+                margin-right: 5px;
+            }
+        }
+
+        .date {
+            background: red;
+            color: @color_1;
+            text-align: center;
+            width: 60px;
+            border-radius: 8px;
+
+            .month {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 2px 6px;
+            }
+
+            .day {
+                background: #f7f7f7;
+                color: @color_5;
+                font-size: 20px;
+                padding: 6px 12px;
+            }
+        }
+
+        .actions {
+            font-size: 15px;
+            display: none;
+        }
+
+        &:hover {
+            .actions {
+                display: block;
+            }
+        }
+    }
+}
+
+.popover-notifications {
+    .popover-content {
+        padding: 0;
+    }
+
+    ul.notifications {
+        list-style: none;
+        padding-left: 0;
+
+        > li {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        > li {
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+    }
+}
+
+#searchGigs {
+    width: 300px;
+   
+}
+
+.input-group-addon  {
+ 
+    -webkit-text-stroke: 0.75px black;
+}
+
+#searchGigs:hover {
+      text-shadow: none;
+}

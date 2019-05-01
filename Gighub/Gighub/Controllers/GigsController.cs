@@ -51,6 +51,13 @@ namespace Gighub.Controllers
             return View("Gigs", viewModel);
         }
 
+        [HttpPost]
+        public ActionResult Search(GigsViewModel viewModel)
+        {
+            return RedirectToAction("Index", "Home", new { query = viewModel.SearchTerm });
+        }
+
+
         [Authorize]
         public ActionResult Create()
         {
@@ -126,6 +133,11 @@ namespace Gighub.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Mine", "Gigs");
+        }
+
+        public ActionResult Search()
+        {
+            throw new NotImplementedException();
         }
     }
 }
